@@ -33,7 +33,7 @@ h1 {
 h2 {
   font-size: 1.35em;
   font-weight: 700;
-  line-height: 23px;
+  line-height: 24px;
   text-transform: uppercase;
 }
 
@@ -119,6 +119,7 @@ header nav ul li a {
 
 .main-title {
   height: auto;
+  padding: 15px 0;
 }
 
 .main-title h2 {
@@ -159,7 +160,7 @@ footer {
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  padding: 5px 0;
+  padding: 10px 0;
   text-align: center;
 }
 
