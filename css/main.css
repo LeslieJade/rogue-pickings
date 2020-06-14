@@ -98,7 +98,7 @@ nav ul li a {
 .top-section, .bottom-section {
   align-items: center;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   justify-content: center;
   margin: 0 auto;
   width: 100%;
@@ -165,8 +165,26 @@ footer span {
   text-transform: lowercase;
 }
 
-/***TABLET LAYOUT***/
-@media all and (min-width: 768px) {
+/***DESKTOP LAYOUT***/
+@media all and (min-width: 1200px) {
+header {
+    flex-flow: row;
+  }
+
+  h1 {
+    border: none;
+    text-align: left;
+  }
+
+  nav ul {
+    display: flex;
+  }
+
+  nav ul li a {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
   .bottom-section {
     align-items: flex-start;
     border-bottom: 1.5px solid #dedbdc;
@@ -187,25 +205,5 @@ footer span {
     border-right: 1.5px solid #dedbdc;
     padding-left: 25px;
     padding-right: 25px;
-  }
-
-/***DESKTOP LAYOUT***/
-@media all and (min-width: 1200px){
-  header {
-    flex-flow: row;
-  }
-
-  h1 {
-    border: none;
-    text-align: left;
-  }
-
-  nav ul {
-    display: flex;
-  }
-
-  nav ul li a {
-    padding-left: 8px;
-    padding-right: 8px;
   }
 }
