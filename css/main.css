@@ -1,124 +1,141 @@
-/*****BASE STYLES*****/
+/***BASE STYLES***/
+html {
+  font-size: 16px;
+  height: 100%;
+  width: 100%;
+}
+
 body {
+  align-items: center;
   color: black;
+  display: flex;
   font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  justify-content: center;
 }
 
 .container {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
   margin: 0 auto;
-  width: 1200px;
+  max-width: 1200px;
+  width: 90%;
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 1.7em;
   font-weight: 700;
   text-transform: uppercase;
 }
 
 h2 {
-  font-size: 18px;
+  font-size: 1.35em;
   font-weight: 700;
-  line-height: 23px;
+  line-height: 24px;
   text-transform: uppercase;
 }
 
-h3 {
-  font-size: 12px;
+h3, h4 {
+  font-size: 1em;
   font-weight: 700;
   text-transform: uppercase;
 }
 
-h4 {
-  font-size: 16px;
-  text-transform: uppercase;
+p {
+  line-height: 24px;
 }
 
-/*****HEADER*****/
+/***HEADER***/
 header {
-  margin: 0 auto;
+  align-items: center;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  width: 100%;
 }
 
-header h1 {
-  float: left;
+h1 {
+  border-bottom: 3px solid #77a466;
   margin: 0;
-  padding: 50px 0;
+  padding: 40px 0;
+  text-align: center;
+  width: 100%;
 }
 
-header h1 span {
+h1 span {
   color: #77a466;
 }
 
-header nav {
-  float: right;
-  padding: 45px 0;
+nav {
+  align-items: center;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  padding: 15px 0;
+  width: 100%;
 }
 
-header nav ul li {
-  display: inline;
-  font-size: 14px;
+nav ul li {
+  align-items: center;
+  display: flex;
+  flex-flow: column wrap;
+  font-size: 1em;
   font-weight: 700;
-  padding: 0 10px;
+  justify-content: center;
+  padding: 15px 0;
   text-transform: uppercase;
+  width: 100%;
 }
 
-header nav ul li a {
+nav ul li a {
   color: #77a466;
   text-decoration: none;
 }
 
-/*****BODY*****/
+/***BODY***/
 .top-section, .bottom-section {
-  clear: both;
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
   margin: 0 auto;
+  width: 100%;
 }
 
 .main-image {
-  float: left;
+  display: flex;
   height: auto;
+  width: 100%;
 }
 
 .main-image img {
   border-bottom: 3px solid #77a466;
   border-top: 3px solid #77a466;
+  width: 100%;
 }
 
 .main-title {
-    float: left;
-    height: auto;
+  height: auto;
+  padding: 15px 0;
 }
 
 .main-title h2 {
   color: #77a466;
-  padding: 5px 0 0 0;
-  text-align: left
+  padding: 15px 0 5px 0;
+  text-align: left;
 }
 
-.main-title p {
-  font-size: 16px;
-  line-height: 25px;
+.section-one, .section-three {
+  border-bottom: 1.5px solid #dedbdc;
+  border-top: 1.5px solid #dedbdc;
 }
 
 .section-one, .section-two, .section-three {
-  border-top: 1px solid #dedbdc;
-  float: left;
-  width: 398px;
-}
-
-.section-one h3 {
-  padding: 20px 0 0 0;
-}
-
-.section-two {
-  border-left: 1px solid #dedbdc;
-  border-right: 1px solid #dedbdc;
-}
-
-.section-two h3, .section-three h3 {
-  padding: 20px 30px 5px 30px;
-}
-
-.section-two p, .section-three p {
-  padding: 0 30px 5px 30px;
+  height: auto;
+  padding: 25px 0;
+  width: 100%;
 }
 
 .menu {
@@ -127,29 +144,18 @@ header nav ul li a {
 }
 
 .menu li {
-    color: #77a466;
-    font-size: 16px;
-    line-height: 18px;
-    padding: 10px 0;
+  color: #77a466;
+  line-height: 18px;
+  padding: 10px 0;
 }
 
-.reviews {
-  font-size: 16px;
-  line-height: 21px;
-}
-
-.address {
-  font-size: 16px;
-  line-height: 24px;
-}
-
-/*****FOOTER*****/
+/***FOOTER***/
 footer {
-  border-top: 1px solid #dedbdc;
-  clear: both;
-  height: 50px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
   margin: 0 auto;
-  padding: 5px 0;
+  padding: 10px 0;
   text-align: center;
 }
 
@@ -157,4 +163,47 @@ footer span {
   color: #77a466;
   font-family: 'Galada', cursive;
   text-transform: lowercase;
+}
+
+/***DESKTOP LAYOUT***/
+@media all and (min-width: 1200px) {
+header {
+    flex-flow: row;
+  }
+
+  h1 {
+    border: none;
+    text-align: left;
+  }
+
+  nav ul {
+    display: flex;
+  }
+
+  nav ul li a {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .bottom-section {
+    align-items: flex-start;
+    border-bottom: 1.5px solid #dedbdc;
+    border-top: 1.5px solid #dedbdc;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    justify-content: space-between;
+  }
+
+  .section-one, .section-two, .section-three {
+    border: none;
+    width: 30%;
+  }
+
+  .section-two {
+    border-left: 1.5px solid #dedbdc;
+    border-right: 1.5px solid #dedbdc;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
 }
